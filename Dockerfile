@@ -13,7 +13,7 @@ RUN apt-get update \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
  
-COPY --from=builder /app/flowerss-bot/flowerss-bot /bin/
+COPY --from=builder /app/flowerss-bot/flowerss-bot /usr/local/bin/
 VOLUME /root/.flowerss
 WORKDIR /root/.flowerss
 ENTRYPOINT ["flowerss-bot"]
