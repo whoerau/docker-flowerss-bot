@@ -16,4 +16,4 @@ RUN apt-get update \
 COPY --from=builder /app/flowerss-bot/flowerss-bot /bin/
 VOLUME /root/.flowerss
 WORKDIR /root/.flowerss
-ENTRYPOINT ["/bin/flowerss-bot"]
+ENTRYPOINT ["flowerss-bot"]
