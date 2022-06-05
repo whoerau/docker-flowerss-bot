@@ -2,7 +2,7 @@ FROM golang:alpine as builder
 RUN export GO111MODULE=on
 WORKDIR /app
 RUN apk add git make gcc libc-dev
-RUN git clone https://github.com/indes/flowerss-bot.git \
+RUN git clone https://github.com/whoerau/flowerss-bot.git \
   && cd /app/flowerss-bot && make build
 
 FROM alpine
